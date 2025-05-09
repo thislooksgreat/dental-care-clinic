@@ -15,7 +15,7 @@ const Header: React.FC = () => {
     <header className="bg-white shadow-md sticky top-0 z-30">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Text-based logo */}
-        <div className="text-blue-800 font-bold">
+        <div className="text-green-800 font-bold">
           <Link href="/" className="flex items-center">
             <span className="text-3xl mr-1">D</span>
             <span className="text-xl">Dental Care</span>
@@ -24,16 +24,16 @@ const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          <Link href="/#services" className="text-gray-700 hover:text-blue-600 transition-colors">
+          <Link href="/#services" className="text-gray-700 hover:text-green-600 transition-colors">
             Services
           </Link>
-          <Link href="/#testimonials" className="text-gray-700 hover:text-blue-600 transition-colors">
+          <Link href="/#testimonials" className="text-gray-700 hover:text-green-600 transition-colors">
             Testimonials
           </Link>
-          <Link href="/#location" className="text-gray-700 hover:text-blue-600 transition-colors">
+          <Link href="/#location" className="text-gray-700 hover:text-green-600 transition-colors">
             Location
           </Link>
-          <Link href="/#contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+          <Link href="/#contact" className="text-gray-700 hover:text-green-600 transition-colors">
             Contact
           </Link>
         </nav>
@@ -54,28 +54,28 @@ const Header: React.FC = () => {
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <Link 
               href="/#services" 
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className="text-gray-700 hover:text-green-600 transition-colors"
               onClick={toggleMenu}
             >
               Services
             </Link>
             <Link 
               href="/#testimonials" 
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className="text-gray-700 hover:text-green-600 transition-colors"
               onClick={toggleMenu}
             >
               Testimonials
             </Link>
             <Link 
               href="/#location" 
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className="text-gray-700 hover:text-green-600 transition-colors"
               onClick={toggleMenu}
             >
               Location
             </Link>
             <Link 
               href="/#contact" 
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className="text-gray-700 hover:text-green-600 transition-colors"
               onClick={toggleMenu}
             >
               Contact

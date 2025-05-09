@@ -45,11 +45,11 @@ const testimonials = [
 
 const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ id }) => {
   return (
-    <section id={id} className="py-16 bg-blue-50">
+    <section id={id} className="py-16 bg-green-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">What Our Patients Say</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-green-900 mb-4">What Our Patients Say</h2>
+          <p className="text-green-600 max-w-2xl mx-auto">
             Don&apos;t just take our word for it. Here&apos;s what our patients have to say about their experience with our dental care.
           </p>
         </div>
@@ -67,11 +67,11 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ id }) => {
                   />
                 </div>
                 <div>
-                  <h3 className="font-bold text-blue-800">{testimonial.name}</h3>
+                  <h3 className="font-bold text-green-800">{testimonial.name}</h3>
                   <p className="text-gray-500 text-sm">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="text-gray-600 italic flex-grow">
+              <p className="text-green-600 italic flex-grow">
                 {testimonial.quote}
               </p>
               <div className="mt-4 text-yellow-500 flex">

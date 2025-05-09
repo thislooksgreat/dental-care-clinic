@@ -41,7 +41,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ id }) => {
     <section id={id} className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Our Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-green-900 mb-4">Our Services</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             We offer a comprehensive range of dental services to meet all your family&apos;s dental needs.
             Our experienced team uses the latest technology to provide the highest quality care.
@@ -50,7 +50,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ id }) => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {services.map((service) => (
-            <div key={service.id} className="bg-blue-50 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
+            <div key={service.id} className="bg-green-50 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
               <div className="relative h-48 w-full">
                 <Image
                   src={service.image}
@@ -61,11 +61,11 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ id }) => {
                 />
               </div>
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-blue-800 mb-2">{service.title}</h3>
+                <h3 className="text-xl font-bold text-green-800 mb-2">{service.title}</h3>
                 <p className="text-gray-600 mb-4 flex-grow">{service.description}</p>
                 <div className="flex justify-between items-center mt-auto">
-                  <span className="text-blue-900 font-semibold">Starting at:</span>
-                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-bold">
+                  <span className="text-green-900 font-semibold">Starting at:</span>
+                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full font-bold">
                     {service.price}
                   </span>
                 </div>
