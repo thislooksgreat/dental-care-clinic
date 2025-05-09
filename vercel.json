@@ -6,9 +6,9 @@
   "outputDirectory": ".next",
   "regions": ["fra1"],
   "env": {
-    "RESEND_API_KEY": "@resend_api_key",
-    "FROM_EMAIL": "@from_email",
-    "TO_EMAIL": "@to_email",
-    "FROM_NAME": "@from_name"
+    "RESEND_API_KEY": "${RESEND_API_KEY}",
+    "FROM_EMAIL": "${FROM_EMAIL}",
+    "TO_EMAIL": "${TO_EMAIL}",
+    "FROM_NAME": "${FROM_NAME}"
   }
 }
