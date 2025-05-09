@@ -62,7 +62,7 @@ const AppointmentForm: React.FC = () => {
       const result = await response.json();
       console.log('API response:', result);
       
-      if (response.ok) {
+      if (response.ok && result.success) {
         setSubmitStatus({
           success: true,
           message: 'Your appointment request has been sent successfully!'
@@ -76,7 +76,10 @@ const AppointmentForm: React.FC = () => {
           message: ''
         });
       } else {
-        throw new Error(result.error || 'Failed to send message');
+        // Extract detailed error message from the API response
+        const errorMessage = result.error || 'Failed to send message';
+        console.error('API error response:', errorMessage);
+        throw new Error(errorMessage);
       }
     } catch (error) {
       console.error('Form submission error:', error);
