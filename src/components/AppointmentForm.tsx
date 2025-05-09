@@ -27,9 +27,30 @@ const AppointmentForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus({}); // Clear previous status
     
     try {
+      // Validate form data before sending
+      if (!formData.name || !formData.email || !formData.phone) {
+        setSubmitStatus({
+          success: false,
+          message: 'Please fill in all required fields (name, email, and phone).'
+        });
+        return;
+      }
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.email)) {
+        setSubmitStatus({
+          success: false,
+          message: 'Please enter a valid email address.'
+        });
+        return;
+      }
+
       // Send form data to the API route
+      console.log('Submitting form data:', formData);
       const response = await fetch('/api/send', {
         method: 'POST',
         headers: {
@@ -39,6 +60,7 @@ const AppointmentForm: React.FC = () => {
       });
       
       const result = await response.json();
+      console.log('API response:', result);
       
       if (response.ok) {
         setSubmitStatus({
@@ -57,6 +79,7 @@ const AppointmentForm: React.FC = () => {
         throw new Error(result.error || 'Failed to send message');
       }
     } catch (error) {
+      console.error('Form submission error:', error);
       setSubmitStatus({
         success: false,
         message: error instanceof Error 
