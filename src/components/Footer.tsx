@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-bold mb-4">Dental Care</h3>
             <p className="mb-4 text-blue-100">
               Professional dental care for your entire family. 
-              We're committed to providing quality dental services in a comfortable environment.
+              We&apos;re committed to providing quality dental services in a comfortable environment.
             </p>
             <div className="flex space-x-4">
               <a href="#" aria-label="Facebook" className="text-blue-200 hover:text-white transition-colors">

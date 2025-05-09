@@ -43,7 +43,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ id }) => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Our Services</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We offer a comprehensive range of dental services to meet all your family's dental needs.
+            We offer a comprehensive range of dental services to meet all your family&apos;s dental needs.
             Our experienced team uses the latest technology to provide the highest quality care.
           </p>
         </div>

@@ -16,7 +16,11 @@ const Map: React.FC<MapProps> = ({ address }) => {
   useEffect(() => {
     // Fix for default marker icons in Leaflet with Next.js
     // This needs to be in useEffect to avoid SSR issues
-    delete (L.Icon.Default.prototype as any)._getIconUrl;
+    // Use a type assertion with a more specific interface instead of any
+    interface IconDefaultPrototype extends L.Icon.Default {
+      _getIconUrl?: unknown;
+    }
+    delete (L.Icon.Default.prototype as IconDefaultPrototype)._getIconUrl;
     
     L.Icon.Default.mergeOptions({
       iconRetinaUrl: '/images/leaflet/marker-icon-2x.png',

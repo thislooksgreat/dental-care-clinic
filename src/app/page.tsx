@@ -6,8 +6,6 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import LocationSection from '@/components/LocationSection';
 import Footer from '@/components/Footer';
 import StickyCallBar from '@/components/StickyCallBar';
-import { dentalClinicSchema } from './structured-data';
-import Script from 'next/script';
 
 export default function Home() {
   return (
